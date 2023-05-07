@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter&display=swap');
+@import url('https://fonts.cdnfonts.com/css/feeling-passionate');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Section 1 */
+
+.containers {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/Find-Us/Images-Find-Us/2-los-cubiertos-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.749));
+    z-index: -1;
+}
+
+.find_us_text {
+    position: absolute;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 65px;
+    transform: translateY(-130px);
+    font-size: clamp(30px, 4vw, 200px);
+} 
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* pointer-events: auto; */
+}
+.parallax .parallax-container {
+  position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    /* z-index: -1; */
+}
+
+.parallax-container img#text-border-1 {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    width: 35%; 
+    height: auto;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -65px;
+}
+
+.parallax-container p {
+    position: relative;
+    top: -85px;
+    font-weight: 100;
+    color: white;
+    font-size: clamp(6px, 2vw, 15px);
+    text-align: center;
+    
+}
+
+.social_media_links_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    top: -40px;
+    padding: clamp(20px, 8vw, 100px);
+    z-index: 1;
+}
+
+.social_media_links_container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.social_media_links_container a img {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  transition: all 0.2s ease-in-out;
+}
+
+.social_media_links_container a:hover img {
+  transform: scale(1.2);
+}
+
+br.responsive {
+    display: inline;
+}
+
+/* Section 2 */
+  
+  .location {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('/Find-Us/Images-Find-Us/concrete-overlay-bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: clamp(10px, 2vw, 15px);
+    z-index: -1;
+  }
+  
+  .location-gmaps {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; 
+    z-index: -1; 
+    padding: clamp(50px, 8vw, 100px);
+  }
+  
+  .location-gmaps iframe {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 30rem;
+    transform: translateY(-330px);
+  } 
+  
+  
+  .location h3 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding-bottom: 40px;
+    padding: clamp(14px, 4vw, 25px);
+  }
+  
+  .location p {
+    margin: 0;
+    padding-bottom: 50px;
+  }
+  
+  .location-infos {
+    position: relative;
+    top: -300px;
+  }
+ 
+  
+/*Responsive Map*/
+
+@media (max-width: 576px) {
+    .location-gmaps{
+        transform: translateY(-50px);
+    }
+}
+
+@media (max-height: 650px) {
+  .location-gmaps iframe{
+      height: 15rem;
+      transform: translateY(-200px);
+  }
+
+  .location-infos {
+    transform: translateY(100px);
+  }
+}
+
+@media (max-width: 1920px) {
+    .location-gmaps{
+        max-width: 1500px;
+        transform: translateY(-10px);
+    }
+    
+}
+
+@media (min-width: 320px) {
+    br.responsive {
+      display: none;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+  .social_media_links_container {
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    padding: 10px;
+  }
+}
+
